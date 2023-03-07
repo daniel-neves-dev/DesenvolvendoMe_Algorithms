@@ -15,6 +15,6 @@ class BubbleSort
       end
       count += 1
     end
-    return array
+    return "Sorted array: #{array}"
   end
 end

@@ -1,14 +1,14 @@
 module Characters
   class Count
-    attr_reader :array
+    attr_reader :characters
 
-    def initialize(array)
-      @array = array.to_s
+    def initialize(characters)
+      @characters = characters
     end
 
     def count_lower_case
-      array.split("")
-      lower = array.each_char {|char| char.count("a".."z")}
+      lower_letters = characters.scan(/[a-z]/).count
+      "Lower case letters: #{lower_letters}"
     end
   end
 end

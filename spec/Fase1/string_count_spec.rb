@@ -12,4 +12,9 @@ RSpec.describe Characters::Count do
       expect(upper_letters).to eq("Upper case letters: 5")
     end
   end
+
+  it "total of numbers" do
+    total_numbers = Characters::Count.new("#GeeKs01fOr@gEEks07").count_numbers
+    expect(total_numbers).to eq("Total numbers: 4")
+  end
 end

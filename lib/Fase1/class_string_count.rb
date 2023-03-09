@@ -15,5 +15,10 @@ module Characters
       upp_letters = characters.scan(/[A-Z]/).count
       "Upper case letters: #{upp_letters}"
     end
+
+    def count_numbers
+      numbers = characters.scan(/\d/).count
+      "Total numbers: #{numbers}"
+    end
   end
 end

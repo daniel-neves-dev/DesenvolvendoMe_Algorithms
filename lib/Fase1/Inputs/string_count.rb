@@ -1,8 +1,9 @@
 # frozen_string_literal: true
+require_relative '../class_string_count'
 
-text = "#GeeKs01fOr@gEEks07"
+puts "Type somes randoms characters, special characters and numbers, with no space in between"
+characters = gets.chomp
+resutl = Characters::Count.new(characters).count_strings
+puts resutl
 
-p text.scan(/[a-z]/)
-p text.scan(/\d/)
-p text.scan(/[A-Z]/)
-p text.scan(/\W/)
+

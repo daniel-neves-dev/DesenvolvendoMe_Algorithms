@@ -22,7 +22,7 @@ module Maximize
       array.length.times do |i|
         sum += array[i]
       end
-      sum
+      "The maximum sum is: #{sum}"
     end
   end
 

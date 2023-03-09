@@ -12,11 +12,13 @@ module Maximize
 
     def maximize_sum
       sum = 0
+      #Modifing the array K number of times
       number.times do
         position = array.min
         index = array.index(position)
         array[index] = -array[index]
       end
+      #Sum the modified array
       array.length.times do |i|
         sum += array[i]
       end

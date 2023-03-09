@@ -20,5 +20,10 @@ module Characters
       numbers = characters.scan(/\d/).count
       "Total numbers: #{numbers}"
     end
+
+    def count_special_characters
+      special_characters = characters.scan(/\W/).count
+      "Special characters: #{special_characters}"
+    end
   end
 end

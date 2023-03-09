@@ -17,4 +17,9 @@ RSpec.describe Characters::Count do
     total_numbers = Characters::Count.new("#GeeKs01fOr@gEEks07").count_numbers
     expect(total_numbers).to eq("Total numbers: 4")
   end
+
+  it "special characters" do
+    special_characters = Characters::Count.new("#GeeKs01fOr@gEEks07").count_special_characters
+    expect(special_characters).to eq("Special characters: 2")
+  end
 end

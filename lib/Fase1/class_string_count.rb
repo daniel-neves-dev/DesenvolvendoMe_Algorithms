@@ -11,7 +11,7 @@ module Characters
       upp_letters = characters.scan(/[A-Z]/).count
       numbers = characters.scan(/\d/).count
       special_characters = characters.scan(/\W/).count
-      "Lower case letters: #{lower_letters},\nUpper case letters: #{upp_letters},\nTotal numbers: #{numbers},\nSpecial characters: #{special_characters}"
+      "Lower case letters: #{lower_letters}\nUpper case letters: #{upp_letters}\nTotal numbers: #{numbers}\nSpecial characters: #{special_characters}"
     end
 
   end

@@ -5,9 +5,9 @@ module FindMaximum
     attr_accessor :stack1, :stack2, :stack3
 
     def initialize(stack1, stack2, stack3)
-      @stack1 = stack1
-      @stack2 = stack2
-      @stack3 = stack3
+      @stack1 = stack1.split(",").map(&:to_i)
+      @stack2 = stack2.split(",").map(&:to_i)
+      @stack3 = stack3.split(",").map(&:to_i)
     end
 
     def max_sum

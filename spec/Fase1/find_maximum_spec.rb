@@ -26,5 +26,15 @@ RSpec.describe FindMaximum::MaxSum do
       equal_sum = FindMaximum::MaxSum.new([1, 2],[1, 2], [1, 2]).max_sum
       expect(equal_sum).to eq(3)
     end
+
+    it "result of the all stacks sam equal 0" do
+      result = FindMaximum::MaxSum.new([3, 10],[4, 5], [2, 1]).max_sum
+      expect(result).to eq(0)
+    end
+
+    it "result of the all stacks sam equal 5" do
+      result = FindMaximum::MaxSum.new([3, 2, 1, 1, 1],[4, 3, 2 ], [1, 1, 4, 1]).max_sum
+      expect(result).to eq(5)
+    end
   end
 end

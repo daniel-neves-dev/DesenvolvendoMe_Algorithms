@@ -12,15 +12,10 @@ module FindMaximum
       sum1, sum2, sum3 = 0, 0, 0
 
       #Finding the initial sum of each stack
-      stack1.each do |i|
-        sum1 += i
-      end
-      stack2.each do |i|
-        sum2 += i
-      end
-      stack3.each do |i|
-        sum3 += i
-      end
+      stack1.each {|i| sum1 += i}
+      stack2.each {|i| sum2 += i}
+      stack3.each {|i| sum3 += i}
+
       while true do
         #If any stack is empty
         if top1 == stack1.length || top2 == stack2.length || top3 == stack3.length

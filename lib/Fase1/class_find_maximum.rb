@@ -16,9 +16,15 @@ module FindMaximum
       stack2.each do |i|
         sum2 += i
       end
-      #If any stack is empty
-      if top1 == stack1.length || top2 == stack2.length
-        return 0
+      while true
+        #If any stack is empty
+        if top1 == stack1.length || top2 == stack2.length
+          return 0
+        end
+        #If the sum of all stacks are the same
+        if sum1 == sum2
+          return sum1
+        end
       end
       return sum1, sum2
     end

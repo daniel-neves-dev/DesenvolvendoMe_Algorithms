@@ -17,6 +17,9 @@ RSpec.describe FindMaximum::MaxSum do
       expect(empyt_stack).to eq(0)
     end
 
-
+    it "the sum of all stacks are equal" do
+      equal_sum = FindMaximum::MaxSum.new([1, 2],[1, 2]).max_sum
+      expect(equal_sum).to eq(3)
+    end
   end
 end

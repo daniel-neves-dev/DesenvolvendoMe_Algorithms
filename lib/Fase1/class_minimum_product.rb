@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Minimum
   class MinimumProduct
     attr_reader :array
@@ -7,10 +9,8 @@ module Minimum
     end
 
     def minimum_product
-      #If the array has only one value
-      if array.length == 1
-        return array[0]
-      end
+      # If the array has only one value
+      return array[0] if array.length == 1
 
       max_negative = array.min
       min_positive = array.max
@@ -18,10 +18,16 @@ module Minimum
       count_negatives = 0
       prod = 1
 
-      if array.index == 0
-        return [0]
-      end
+      array.each do |i|
 
+        #Skip zero values
+        if i == 0
+          count_zeros += 1
+          next
+        end
+
+      end
+      return count_zeros
     end
   end
 end

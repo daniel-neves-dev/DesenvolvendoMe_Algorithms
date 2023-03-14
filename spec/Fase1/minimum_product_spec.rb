@@ -6,3 +6,10 @@ RSpec.describe Minimum::MinimumProduct do
     expect(one_number).to be(5)
   end
 
+  it "count zeros" do
+    count_zero = Minimum::MinimumProduct.new("0,2").minimum_product
+    expect(count_zero).to be(1)
+  end
+
+end
+

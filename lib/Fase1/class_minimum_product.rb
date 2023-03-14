@@ -25,7 +25,7 @@ module Minimum
           next
         end
 
-        # Count negatives and track the most negative
+        # Count negatives and track the less negative
         if i < 0
           count_negatives += 1
           max_negative = [max_negative, i].max

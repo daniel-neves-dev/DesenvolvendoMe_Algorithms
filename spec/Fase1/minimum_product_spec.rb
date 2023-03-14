@@ -6,9 +6,9 @@ RSpec.describe Minimum::MinimumProduct do
     expect(one_number).to be(5)
   end
 
-  it "count zeros" do
-    count_zero = Minimum::MinimumProduct.new("0,2").minimum_product
-    expect(count_zero).to be(1)
+  it "count_negatives and track the most negative" do
+    negative_numbers = Minimum::MinimumProduct.new("-1,-4,-2").minimum_product
+    expect(negative_numbers).to eq([3, -1])
   end
 
 end

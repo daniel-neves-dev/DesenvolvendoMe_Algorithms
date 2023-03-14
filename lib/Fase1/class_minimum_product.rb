@@ -12,8 +12,8 @@ module Minimum
       # If the array has only one value
       return array[0] if array.length == 1
 
-      max_negative = array.min
-      min_positive = array.max
+      max_negative = -1.0/0.0
+      min_positive = 1.0/0.0
       count_zeros = 0
       count_negatives = 0
       prod = 1
@@ -26,8 +26,14 @@ module Minimum
           next
         end
 
+        #Count negatives and track the most negative
+        if i < 0
+          count_negatives += 1
+          max_negative = [max_negative, i].max
+        end
+
       end
-      return count_zeros
+      return count_negatives, max_negative
     end
   end
 end

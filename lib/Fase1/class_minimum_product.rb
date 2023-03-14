@@ -32,8 +32,12 @@ module Minimum
           max_negative = [max_negative, i].max
         end
 
+        if i > 0
+          min_positive = [min_positive, i].min
+        end
+
       end
-      return count_negatives, max_negative
+      return min_positive
     end
   end
 end

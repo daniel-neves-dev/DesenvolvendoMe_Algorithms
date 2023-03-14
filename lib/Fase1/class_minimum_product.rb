@@ -38,6 +38,9 @@ module Minimum
 
       # If there are all zeros or no negative number
       return 0 if count_zeros == (array.length) || (count_zeros > 0 && count_negatives == 0)
+
+      #If there are only positive
+      return min_positive if count_negatives == 0
       # return prod
     end
   end

@@ -1,0 +1,1 @@
+require_relative '../../lib/Fase1/class_reversal_array'

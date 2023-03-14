@@ -15,5 +15,18 @@ RSpec.describe Minimum::MinimumProduct do
     all_positive = Minimum::MinimumProduct.new("8,5,2,4,6").minimum_product
     expect(all_positive).to eq(2)
   end
+
+  it "minimum sum: output 24" do
+    result = Minimum::MinimumProduct.new("-1,-1,-2,4,3").minimum_product
+    expect(result).to eq(-24)
+  end
+
+  it "minimum sum: output -1" do
+    result = Minimum::MinimumProduct.new("-1,0").minimum_product
+    expect(result).to eq(-1)
+  end
 end
+
+
+
 

@@ -33,7 +33,7 @@ module Minimum
 
         min_positive = [min_positive, i].min if i > 0
 
-        prod *= 1
+        prod *= i
       end
 
       # If there are all zeros or no negative number
@@ -41,7 +41,13 @@ module Minimum
 
       #If there are only positive
       return min_positive if count_negatives == 0
-      # return prod
+
+      #If there are even of negative numbers and count_negative is zero
+      if (count_negatives.even?) and count_negatives != 0
+        prod = (prod / max_negative).to_i
+      end
+
+      return prod
     end
   end
 end

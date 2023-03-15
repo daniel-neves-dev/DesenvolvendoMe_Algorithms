@@ -22,9 +22,12 @@ module Find
         elsif i > second
           third = second
           second = i
+
+        elsif i > third
+          third = i
         end
       end
-      [first, second]
+      [first, second, third]
     end
   end
 end

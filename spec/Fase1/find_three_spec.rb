@@ -9,4 +9,9 @@ RSpec.describe Find::Three do
     array_numbers = Find::Three.new("2,3,4,1,6").find_three
     expect(array_numbers).to eq([6, 4, 3])
   end
+
+  it "output 90, 50, 23" do
+    array_numbers = Find::Three.new("10, 4, 3, 50, 23, 90").find_three
+    expect(array_numbers).to eq([90, 50, 23])
+  end
 end

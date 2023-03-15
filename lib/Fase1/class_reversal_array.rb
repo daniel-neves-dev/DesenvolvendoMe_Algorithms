@@ -4,7 +4,7 @@
 
     def initialize(array, k)
       @array = array.split(",").map(&:to_i)
-      @k = k
+      @k = k.to_i
     end
     def reverse_array(array, start, ending)
       while start < ending

@@ -20,6 +20,7 @@
     end
     def print_array
       n = array.length
+      k = @k % n #If k bigger than array
       right_rotate(array, k, n)
       k.times { return array }
     end

@@ -1,18 +1,18 @@
-module Pangram
-  class MissingChatacter
-    attr_reader :characters
+# frozen_string_literal: true
 
-    def initialize(characters)
-      @characters = characters
+module Pangram
+  class MissingCharacter
+    attr_reader :str
+
+    def initialize(str)
+      @str = str
     end
 
     def missing_characters
       alphabet = ("a".."z").to_a
-      missing_chars = []
-      characters.split.each do |i|
-        missing_chars <<  alphabet unless alphabet.include?(characters)
-      end
-      missing_chars
+      characters = str.downcase.chars
+      missing_chars = alphabet - characters.uniq
+      missing_chars.join("")
     end
   end
 end

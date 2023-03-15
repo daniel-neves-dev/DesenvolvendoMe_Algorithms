@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Find
   class Three
     attr_reader :array
@@ -7,21 +9,22 @@ module Find
     end
 
     def find_three
+      # Array has lass than 3 numbers
+      return "You need at least 3 numbers" if array.length < 3
 
-      #Array has lass than 3 numbers
-      if array.length < 3
-        return "You need at least 3 numbers"
-      end
-
-      first = second = third = array.max
-      array.each_with_index do |n, i|
-        if n[i] > first
+      first = second = third = 0
+      array.each do |i|
+        if i > first
           third = second
           second = first
-          first = n[i]
+          first = i
+
+        elsif i > second
+          third = second
+          second = i
         end
       end
-      first
+      [first, second]
     end
   end
 end

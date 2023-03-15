@@ -7,10 +7,21 @@ module Find
     end
 
     def find_three
-      first, second, third = array.max
+
+      #Array has lass than 3 numbers
       if array.length < 3
-        "You need at least 3 numbers"
+        return "You need at least 3 numbers"
       end
+
+      first = second = third = array.max
+      array.each_with_index do |n, i|
+        if n[i] > first
+          third = second
+          second = first
+          first = n[i]
+        end
+      end
+      first
     end
   end
 end

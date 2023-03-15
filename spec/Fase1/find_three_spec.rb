@@ -4,4 +4,9 @@ RSpec.describe Find::Three do
     array_numbers = Find::Three.new("2,3").find_three
     expect(array_numbers).to eq("You need at least 3 numbers")
   end
+
+  it "first position" do
+    firts_number = Find::Three.new("2,3,4,1").find_three
+    expect(firts_number).to eq(4)
+  end
 end

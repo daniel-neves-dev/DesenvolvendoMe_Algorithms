@@ -27,7 +27,7 @@ module Find
           third = i
         end
       end
-      [first, second, third]
+      "Three largest elements are: #{[first, second, third].join(", ")}"
     end
   end
 end
